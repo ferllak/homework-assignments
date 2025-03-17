@@ -1,0 +1,71 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f3e6d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    font-size: 28px;
+    color: #4d2b19;
+    margin-top: 20px;
+}
+
+.description {  /* tanıtım meti kısmı */
+    font-size: 16px;
+    color: #5a3e2b;
+}
+
+h2, h3 {
+    font-family: 'Young Serif', serif;
+    color: #5a3e2b;
+}
+
+.prep-time {  /*hazırlık süresi alanı*/
+    background-color: #fae3d9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.nutrition table {  /*besin değerinin olduğu tablo*/
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.nutrition th, .nutrition td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nutrition th {
+    text-align: left;
+    font-weight: bold;
+}
