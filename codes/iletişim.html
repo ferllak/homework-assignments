@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Flora Fotoğrafçılık - Profesyonel düğün ve doğa fotoğrafçılığı hizmetleri." />
+  <title>Dew & Light</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  
+  <style>
+    /* Temel yazı tipi ve arka plan */
+    body {
+      background-color: #f0f0f0;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    /* El yazısı font */
+    .el-yazisi,
+    .navbar-brand {
+      font-family: 'Dancing Script', cursive;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #c8d9c9 !important;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .navbar-brand {
+      color: #000 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #000 !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link:focus, .nav-link.active {
+      color: #555 !important;
+    }
+    /* Navbar toggler ikonu */
+    .navbar-toggler-icon {
+      filter: invert(1);
+      transition: filter 0.3s ease;
+    }
+    .navbar-toggler:hover .navbar-toggler-icon,
+    .navbar-toggler:focus .navbar-toggler-icon {
+      filter: invert(0.7);
+    }
+
+    /* Başlıklar */
+    h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
+    h3 {
+      font-weight: bold;
+    }
+
+    /* Kartlar */
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      color: #000;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-title {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .card-text {
+      color: #333;
+    }
+
+    /* Kart hover efekti */
+    .card-img-top {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    /* Accordion */
+    .accordion-button {
+      background-color: #f8f9fa;
+      color: #000;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #e9ecef;
+      color: #000;
+    }
+
+    /* İkonlar */
+    .bi {
+      color: #000;
+      transition: color 0.3s ease;
+    }
+
+    /* Footer */
+    footer {
+      background-color:  #d9e3d9;
+      color: #000;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+    }
+
+    footer a {
+      color: #000;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #555;
+      text-decoration: none;
+    }
+
+    /* Butonlar */
+    .btn-primary {
+      background-color: #000;
+      border-color: #000;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #333;
+      border-color: #333;
+      color: #fff;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Carousel ikonları */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1);
+    }
+
+    /* Galeri (Masonry columns) */
+    .masonry-columns {
+      column-count: 4;
+      column-gap: 1rem;
+    }
+
+    .masonry-columns img {
+      width: 100%;
+      break-inside: avoid;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .masonry-columns img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 992px) {
+      .masonry-columns {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .masonry-columns {
+        column-count: 1;
+      }
+    }
+    h2.text-center {
+  font-family:  'Dancing Script', cursive;
+
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+ <img src="images/Dew_Light_logo-removebg-preview.png" alt="Dew & Light Logo" style="height:90px; width: auto;">
+
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html" aria-current="page">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="hakkımızda.html">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link active" href="iletişim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- İletişim Formu -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Bize Ulaşın</h2>
+
+    <form method="post" action="#">
+      <div class="mb-3">
+        <label for="isim" class="form-label">Adınız Soyadınız</label>
+        <input type="text" class="form-control" id="isim" placeholder="Adınızı ve soyadınızı girin" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-posta Adresiniz</label>
+        <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin" required />
+      </div>
+      <div class="mb-3">
+        <label for="telefon" class="form-label">Telefon (Opsiyonel)</label>
+        <input type="tel" class="form-control" id="telefon" placeholder="Telefon numaranızı girin" />
+      </div>
+      <div class="mb-3">
+        <label for="mesaj" class="form-label">Mesajınız</label>
+        <textarea class="form-control" id="mesaj" rows="5" placeholder="Mesajınızı yazın..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+  </section>
+
+  <!-- Randevu Oluşturma Bölümü -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Randevu Oluştur</h2>
+    <form id="randevuForm">
+      <div class="mb-3">
+        <label for="randevuTarihi" class="form-label">Randevu Tarihi</label>
+        <input type="date" class="form-control" id="randevuTarihi" required />
+        <div id="tarihUyari" class="text-danger mt-1" style="display:none;">Seçilen gün doludur, lütfen başka gün seçin.</div>
+      </div>
+      <div class="mb-3">
+        <label for="randevuSaati" class="form-label">Randevu Saati</label>
+        <select class="form-select" id="randevuSaati" required>
+          <option value="">Lütfen saat seçin</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Randevu Al</button>
+    </form>
+    <div id="formSonuc" class="mt-3"></div>
+  </section>
+
+  
+
+   <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Sol taraf: Küçük harita -->
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div style="width: 100%; height: 250px; overflow: hidden; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.8923705485196!2d37.84711981523275!3d41.206023779273886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40801c47f8f4b8a1%3A0x9f4528eb0b4fae55!2sKarab%C3%BCk%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1685000000000!5m2!1str!2str"
+              style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Harita - Karabük Üniversitesi Konumu"></iframe>
+          </div>
+        </div>
+
+        <!-- Sağ taraf: İletişim bilgileri ve sosyal medya -->
+        <div class="col-md-8 text-md-end">
+          <p class="mb-1"><strong>Adres:</strong> Karabük Üniversitesi, Karabük, Türkiye</p>
+          <p class="mb-1"><strong>Telefon:</strong> +90 123 456 7890</p>
+          <p class="mb-3"><strong>Email:</strong> info@dewandlight.com</p>
+          <a href="#" class="mx-2" aria-label="Facebook"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="mx-2" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="mx-2" aria-label="TikTok"><i class="bi bi-tiktok fs-4"></i></a>
+        </div>
+      </div>
+      <hr />
+      <p class="text-center mb-0">© 2025 Dew & Light. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Önceden dolu olan günler (örnek tarih formatı: YYYY-MM-DD)
+    const doluGunler = ["2025-05-26", "2025-05-28", "2025-06-02"];
+
+    const tarihInput = document.getElementById('randevuTarihi');
+    const uyari = document.getElementById('tarihUyari');
+    const formSonuc = document.getElementById('formSonuc');
+
+    // Tarih değiştiğinde kontrol et
+    tarihInput.addEventListener('change', () => {
+      if (doluGunler.includes(tarihInput.value)) {
+        uyari.style.display = 'block';
+        tarihInput.value = ""; // boşalt
+      } else {
+        uyari.style.display = 'none';
+      }
+    });
+
+    // Form gönderildiğinde
+    document.getElementById('randevuForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const secilenTarih = tarihInput.value;
+      const secilenSaat = document.getElementById('randevuSaati').value;
+
+      if (!secilenTarih || !secilenSaat) {
+        formSonuc.innerHTML = '<div class="alert alert-danger">Lütfen tarih ve saat seçin.</div>';
+        return;
+      }
+
+      // Basit simülasyon: randevu kaydedildi mesajı
+      formSonuc.innerHTML = <div class="alert alert-success">Randevunuz ${secilenTarih} saat ${secilenSaat} için alındı. Teşekkürler!</div>;
+
+      // Formu temizle
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>  
