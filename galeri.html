@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dew & Light</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <style>
+    /* Temel yazı tipi ve arka plan */
+    body {
+      background-color: #f0f0f0;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    /* El yazısı font */
+    .el-yazisi,
+    .navbar-brand {
+      font-family: 'Dancing Script', cursive;
+    }
+
+        /* Navbar */
+    .navbar {
+      background-color: #c8d9c9 !important;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .navbar-brand {
+      color: #000 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #000 !important;
+      font-weight: 500;
+    }
+    .nav-link:hover, .nav-link:focus, .nav-link.active {
+      color: #555 !important;
+      
+    }
+
+    /* Başlıklar */
+    h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
+    h3 {
+      font-weight: bold;
+    }
+
+    /* Kartlar */
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      color: #000;
+      overflow: hidden;
+    }
+
+    .card-title {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .card-text {
+      color: #333;
+    }
+
+    /* Kart hover efekti */
+    .card-img-top {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    /* Accordion */
+    .accordion-button {
+      background-color: #f8f9fa;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #e9ecef;
+      color: #000;
+    }
+
+    /* İkonlar */
+    .bi {
+      color: #000;
+    }
+
+    /* Footer */
+    footer {
+      background-color:  #d9e3d9;
+      color: #000;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    footer a {
+      color: #000;
+      transition: color 0.3s;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #555;
+      text-decoration: none;
+    }
+
+    /* Butonlar */
+    .btn-primary {
+      background-color: #000;
+      border-color: #000;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #333;
+      border-color: #333;
+      color: #fff;
+    }
+
+    /* Carousel ikonları */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1);
+    }
+
+    /* Galeri (Masonry columns) */
+    .masonry-columns {
+      column-count: 4;
+      column-gap: 1rem;
+    }
+
+    .masonry-columns img {
+      width: 100%;
+      break-inside: avoid;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 992px) {
+      .masonry-columns {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .masonry-columns {
+        column-count: 1;
+      }
+    }
+    h3.text-center {
+  font-family: 'Dancing Script', cursive;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+ <img src="images/Dew_Light_logo-removebg-preview.png" alt="Dew & Light Logo" style="height:90px; width: auto;">
+
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="hakkımızda.html">Hakkımızda</a></li>
+        <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
+        <li class="nav-item"><a class="nav-link active" href="galeri.html">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletişim.html">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Galeri Başlığı -->
+
+  <section class="container my-5">
+  <h3 class="fw-bold fs-3 mb-4 text-center">Galeri</h3>
+  <div class="masonry-columns">
+    <img src="images/martı.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/cami içi.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/düğün 1.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/bebek 1.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/kaplan.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/kahve.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/istanbul.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/mezuniyet.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/düğün 2.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/doğa 1.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/tekne.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/ayıcık.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/deniz mnazarası.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/düğün 34.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/evler.jpeg" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/evlenme teklifi.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+    <img src="images/düğün.webp" alt="Fotoğraf" class="img-fluid rounded shadow-sm mb-3" />
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+  <div class="container">
+    <p>© 2025 Dew & Light. Tüm hakları saklıdır.</p>
+    <a href="#" class="mx-2"><i class="bi bi-facebook fs-4"></i></a>
+    <a href="#" class="mx-2"><i class="bi bi-instagram fs-4"></i></a>
+    <a href="#" class="mx-2"><i class="bi bi-tiktok fs-4"></i></a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
